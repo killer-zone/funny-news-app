@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: funny-news
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python funny_news_app.py"
+    envVars:
+      - key: KEY
+        sync: false
